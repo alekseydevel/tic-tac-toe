@@ -88,8 +88,7 @@ class GameApp extends Application
             throw new \RuntimeException("Empty grid. Please, run game:start command");
         }
 
-        // Hardcoded grid size
-        (new GridValidator(9))->validateSize($this->grid);
+        (new GridValidator($this->grid->sideSize()))->validateSize($this->grid);
 
         return $this->grid;
     }

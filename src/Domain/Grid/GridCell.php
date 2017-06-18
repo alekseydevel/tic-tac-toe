@@ -3,6 +3,9 @@ namespace Game\Domain\Grid;
 
 use Game\Domain\Figure\Figure;
 
+/**
+ * At the end this class became redundant
+ */
 class GridCell
 {
     /**

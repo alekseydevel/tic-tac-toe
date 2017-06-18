@@ -11,7 +11,16 @@ class GridCellCollection
 
     public function __construct($maxSize = 3)
     {
+        if ($maxSize < 2 || $maxSize % 2 == 0) {
+            throw new \InvalidArgumentException('Invalid grid size');
+        }
+
         $this->maxSize = $maxSize;
+    }
+
+    public function sideSize()
+    {
+        return (int) $this->maxSize;
     }
 
     public function add(GridCellPointer $cellPointer)

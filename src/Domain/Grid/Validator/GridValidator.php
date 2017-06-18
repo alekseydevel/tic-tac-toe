@@ -17,13 +17,13 @@ class GridValidator
         $count = 0;
 
         foreach ($grid->cells() as $row => $cols) {
-            if (count($cols) != sqrt($this->size)) {
+            if (count($cols) != $this->size) {
                 throw new \RuntimeException("Empty or not valid grid. Please, run game:start command");
             }
-            $count += sqrt($this->size);
+            $count += $this->size;
         }
 
-        if ($count != $this->size) {
+        if ($count != pow($this->size, 2)) {
             throw new \RuntimeException("Empty or not valid grid. Please, run game:start command");
         }
     }
