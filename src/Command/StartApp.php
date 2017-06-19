@@ -1,10 +1,10 @@
 <?php
 namespace Game\Command;
 
-use Game\Domain\GridCell;
-use Game\Domain\GridCellCollection;
+use Game\Domain\Grid\GridCell;
+use Game\Domain\Grid\GridCellCollection;
 use Game\Domain\Figure\CrossFigure;
-use Game\Domain\GridCellPointer;
+use Game\Domain\Grid\GridCellPointer;
 use Game\Infrastructure\Events\Events;
 use Game\Infrastructure\Events\GridRedraw;
 use Symfony\Component\Console\Command\Command;
